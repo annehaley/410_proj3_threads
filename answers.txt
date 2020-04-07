@@ -1,0 +1,10 @@
+1. How do you determine the number of threads
+you should launch to realistically test your application?
+	Test how many threads will get unexpected behavior before
+	the mutex is implemented. Test the same number after implementing the 
+	mutex and see expected behavior if everything else is correct.
+
+2. If you are launching several threads, under what circumstances would
+these threads not run in parallel on a modern processor?
+	If you have a number of threads greater than twice the number of
+	CPUs, they cannot all run in parallel.
